@@ -6,7 +6,7 @@
  */
  
 /*--------------------------------------------------------------
-# Team Members
+# Repeater Field: Team Members
 --------------------------------------------------------------*/
 function hfm_team_members_content() {
 	
@@ -59,3 +59,28 @@ function hfm_team_members_content() {
 	
 <?php }
 add_action( 'hfm_team_members_content', 'hfm_team_members_content' );
+
+/*--------------------------------------------------------------
+# ACF Block: Customer Testimonial
+--------------------------------------------------------------*/
+function my_acf_init_block_types() {
+
+	// Check function exists.
+	if( function_exists('acf_register_block_type') ) {
+	
+		// register a testimonial block.
+		acf_register_block_type(array(
+			'name'              => 'testimonial',
+			'title'             => __('Testimonial'),
+			'description'       => __('A custom testimonial block.'),
+			'render_template'   => 'template-parts/blocks/testimonial/testimonial.php',
+			'category'          => 'formatting',
+			'icon'              => 'admin-comments',
+			'keywords'          => array( 'testimonial', 'quote' ),
+			'enqueue_style'		=> get_stylesheet_directory_uri() . '/template-parts/blocks/testimonial/testimonial.css'
+		));
+		
+	}
+	
+}
+add_action('acf/init', 'my_acf_init_block_types');

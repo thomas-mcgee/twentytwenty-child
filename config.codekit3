@@ -33,6 +33,25 @@
       "oAP" : "\/inc\/acf.php",
       "oF" : 0
     },
+    "\/README.md" : {
+      "cB" : 0,
+      "cS" : 0,
+      "eF" : 1,
+      "eL" : 1,
+      "ema" : 1,
+      "eSQ" : 1,
+      "ft" : 4096,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/README.html",
+      "oF" : 0,
+      "oFM" : 0,
+      "oS" : 0,
+      "pHT" : 0,
+      "pME" : 1,
+      "rFN" : 0,
+      "uCM" : 0
+    },
     "\/screenshot.png" : {
       "ft" : 32768,
       "iS" : 53066,
@@ -88,6 +107,20 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/blocks\/testimonial.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/template-parts\/blocks\/testimonial\/testimonial.css",
+      "oF" : 2,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/style.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -113,6 +146,14 @@
       "oAP" : "\/style-min.css",
       "oF" : 0,
       "pg" : 0
+    },
+    "\/template-parts\/blocks\/testimonial\/testimonial.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/template-parts\/blocks\/testimonial\/testimonial.php",
+      "oF" : 0
     },
     "\/template-parts\/content.php" : {
       "cB" : 0,
