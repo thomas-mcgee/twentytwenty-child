@@ -21,5 +21,12 @@ function my_theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
-// Require ACF custom integrations.
+/*--------------------------------------------------------------
+# Custom image sizes.
+--------------------------------------------------------------*/
+add_image_size( 'large_avatar', 512, 512, true );
+
+/*--------------------------------------------------------------
+# Require ACF custom integrations.
+--------------------------------------------------------------*/
 require get_stylesheet_directory() . '/inc/acf.php';

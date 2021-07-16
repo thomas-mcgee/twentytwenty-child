@@ -8,13 +8,15 @@
 /*--------------------------------------------------------------
 # Team Members
 --------------------------------------------------------------*/
-function hfm_team_members_content() { ?>
+function hfm_team_members_content() {
+	
+	 ?>
 	
 	<div class="grid-container">
 		
 		<div class="grid-25 tablet-grid-50">
 			
-			Here is where it will go . . .
+			Here is where it will go . . . 
 			
 		</div>
 		
