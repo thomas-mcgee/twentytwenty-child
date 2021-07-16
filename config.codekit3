@@ -33,6 +33,14 @@
       "oAP" : "\/inc\/acf.php",
       "oF" : 0
     },
+    "\/posts\/docs.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/posts\/docs.php",
+      "oF" : 0
+    },
     "\/README.md" : {
       "cB" : 0,
       "cS" : 0,
@@ -144,6 +152,18 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/style-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/template-parts\/blocks\/testimonial\/testimonial.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/template-parts\/blocks\/testimonial\/testimonial-min.css",
       "oF" : 0,
       "pg" : 0
     },

@@ -40,6 +40,11 @@ add_action( 'wp_head', 'hfm_wp_head' );
 add_image_size( 'large_avatar', 512, 512, true );
 
 /*--------------------------------------------------------------
+# Custom post types.
+--------------------------------------------------------------*/
+require get_stylesheet_directory() . '/posts/docs.php';
+
+/*--------------------------------------------------------------
 # Require ACF custom integrations.
 --------------------------------------------------------------*/
 require get_stylesheet_directory() . '/inc/acf.php';

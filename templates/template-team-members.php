@@ -4,7 +4,7 @@
  * Template Post Type: post, page
  *
  * @package WordPress
- * @subpackage Twenty_Twenty
+ * @subpackage Twenty_Twenty_Child
  * @since Twenty Twenty 1.0
  */
 

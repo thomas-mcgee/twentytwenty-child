@@ -84,3 +84,7 @@ function my_acf_init_block_types() {
 	
 }
 add_action('acf/init', 'my_acf_init_block_types');
+
+/*--------------------------------------------------------------
+# Flexible Content: Documentation Content Helpers
+--------------------------------------------------------------*/
