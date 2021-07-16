@@ -1,0 +1,25 @@
+/*--------------------------------------------------------------
+# Team members.
+--------------------------------------------------------------*/
+.team-member {
+	text-align: center;
+	margin-bottom: 1.5rem;
+	padding: 20px;
+	
+	img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+		border-radius: 300px;
+	}
+	
+	h3 {
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+	}
+	
+	p {
+		margin: 0 0 1.5rem 0;
+	}
+	
+}
