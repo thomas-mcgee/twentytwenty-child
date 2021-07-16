@@ -35,7 +35,12 @@
 			} else {
 				the_content( __( 'Continue reading', 'twentytwenty' ) );
 			}
-			?>
+			
+			if ( is_page_template( 'templates/template-team-members.php' ) ) {
+				
+				do_action( 'hfm_team_members_content' );
+				
+			} ?>
 
 		</div><!-- .entry-content -->
 

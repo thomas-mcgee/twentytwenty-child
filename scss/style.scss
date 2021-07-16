@@ -1,0 +1,28 @@
+/*!
+ Theme Name:   Twenty Twenty Child
+ Theme URI:    https://thomasmcgee.tv
+ Description:  Twenty Twenty Child Theme
+ Author:       Thomas McGee
+ Author URI:   https://thomasmcgee.tv
+ Template:     twentytwenty
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twentytwentychild
+*/
+
+/*--------------------------------------------------------------
+# Libraries
+--------------------------------------------------------------*/
+@import 'grid';
+
+/*--------------------------------------------------------------
+# Overrides
+--------------------------------------------------------------*/
+@import 'overrides';
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+@import 'content';

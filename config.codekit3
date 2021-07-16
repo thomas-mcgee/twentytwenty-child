@@ -9,6 +9,14 @@
   ],
   "creatorBuild" : "34127",
   "files" : {
+    "\/.gitattributes" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/.gitattributes",
+      "oF" : 0
+    },
     "\/functions.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -37,6 +45,48 @@
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
+    },
+    "\/scss\/_content.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/scss\/_content.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/_grid.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/scss\/_grid.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/_overrides.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/scss\/_overrides.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
     },
     "\/scss\/style.scss" : {
       "aP" : 0,
@@ -72,12 +122,12 @@
       "oAP" : "\/template-parts\/content.php",
       "oF" : 0
     },
-    "\/templates\/template-full-width.php" : {
+    "\/templates\/template-team-members.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/templates\/template-full-width.php",
+      "oAP" : "\/templates\/template-team-members.php",
       "oF" : 0
     }
   },
