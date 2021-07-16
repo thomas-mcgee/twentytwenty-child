@@ -40,6 +40,10 @@
 				
 				do_action( 'hfm_team_members_content' );
 				
+			} elseif ( get_post_type() == 'docs' ) {
+				
+				do_action( 'hfm_documention_extras' );
+				
 			} ?>
 
 		</div><!-- .entry-content -->

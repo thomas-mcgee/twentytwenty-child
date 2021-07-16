@@ -88,3 +88,30 @@ add_action('acf/init', 'my_acf_init_block_types');
 /*--------------------------------------------------------------
 # Flexible Content: Documentation Content Helpers
 --------------------------------------------------------------*/
+/* START HERE function hfm_documention_extras() {
+	
+	// Check value exists.
+	if( have_rows('content') ):
+	
+		// Loop through rows.
+		while ( have_rows('content') ) : the_row();
+	
+			// Case: Paragraph layout.
+			if( get_row_layout() == 'paragraph' ):
+				$text = get_sub_field('text');
+				// Do something...
+	
+			// Case: Download layout.
+			elseif( get_row_layout() == 'download' ): 
+				$file = get_sub_field('file');
+				// Do something...
+	
+			endif;
+	
+		// End loop.
+		endwhile;
+	
+	endif;
+	
+}
+add_action( 'hfm_documention_extras', 'hfm_documention_extras' ); */
