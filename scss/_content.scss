@@ -28,3 +28,119 @@
 # Testimonial.
 --------------------------------------------------------------*/
 // Styles rendered in separate CSS file.
+
+/*--------------------------------------------------------------
+# Docs.
+--------------------------------------------------------------*/
+.doc-alerts {
+	margin-bottom: 3rem;
+	
+	.doc-alert {
+		padding: 30px 30px 30px 75px;
+		border-radius: 2px;
+		background-color: #caddec;
+		border: 1px solid #55789a;
+		margin-bottom: 2rem;
+		position: relative;
+		
+		&.doc-alert-Warning {
+			
+			&:before {
+				content: '\f071';
+			}
+			
+		}
+		
+		&:before {
+			content: '\f0eb';
+			font-family: 'Font Awesome 5 Pro';
+			position: absolute;
+			width: 40px;
+			text-align: center;
+			top: 25px;
+			left: 20px;
+			font-size: 3.5rem;
+			line-height: 3.5rem;
+			color: #55789a;
+		}
+		
+	}
+	
+}
+
+.doc-extras {
+	text-align: center;
+	
+	h3 {
+		text-align: center;
+	}
+	
+	.gallery {
+		margin-top: 0;
+		margin-bottom: 3rem;
+		padding: 0 25px;
+		text-align: center;
+		float: none;
+		display: inline-block;
+		
+		img {
+			display: block;
+			margin: 0;
+		}
+		
+	}
+	
+	.download-table {
+		
+		.description {
+			text-align: left;
+			padding: 25px;
+			
+			h3 {
+				text-align: left;
+				margin-bottom: 1.5rem !important;
+			}
+			
+			@media (max-width: $tablet-breakpoint) {
+				display: block;
+				width: 100%;
+			}
+			
+		}
+		
+		.file {
+			width: 25%;
+			text-align: center;
+			
+			@media (max-width: $tablet-breakpoint) {
+				display: block;
+				width: 100%;
+			}
+			
+		}
+		
+	}
+	
+}
+
+/*--------------------------------------------------------------
+# Sitewide banner.
+--------------------------------------------------------------*/
+.sitewide-banner {
+	@extend .hide-on-mobile;
+	
+	.grid-container {
+		display: table;
+		width: 100%;
+		
+		.grid-70,
+		.grid-30 {
+			display: table-cell;
+			vertical-align: middle;
+			float: none;
+			text-align: center;
+		}
+		
+	}
+	
+}

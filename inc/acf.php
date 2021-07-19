@@ -88,30 +88,125 @@ add_action('acf/init', 'my_acf_init_block_types');
 /*--------------------------------------------------------------
 # Flexible Content: Documentation Content Helpers
 --------------------------------------------------------------*/
-/* START HERE function hfm_documention_extras() {
+function hfm_documentation_notifications() {
 	
 	// Check value exists.
-	if( have_rows('content') ):
-	
-		// Loop through rows.
-		while ( have_rows('content') ) : the_row();
-	
-			// Case: Paragraph layout.
-			if( get_row_layout() == 'paragraph' ):
-				$text = get_sub_field('text');
-				// Do something...
-	
-			// Case: Download layout.
-			elseif( get_row_layout() == 'download' ): 
-				$file = get_sub_field('file');
-				// Do something...
-	
-			endif;
-	
-		// End loop.
-		endwhile;
-	
-	endif;
+	if( have_rows( 'extras' ) ): ?>
+		
+		<div class="doc-alerts">
+			<div class="grid-container">
+			<?php // Loop through rows.
+			while ( have_rows( 'extras' ) ) : the_row();
+				
+				if ( get_row_layout() == 'notification' ) : ?>
+				<div class="grid-100">
+					<div class="doc-alert doc-alert-<?php echo get_sub_field( 'type' ); ?>">
+						<?php echo get_sub_field( 'content' ); ?>
+					</div>
+				</div>
+				<?php endif;
+				
+			// End loop.
+			endwhile; ?>
+			</div>
+		</div>
+		
+	<?php endif;
 	
 }
-add_action( 'hfm_documention_extras', 'hfm_documention_extras' ); */
+
+function hfm_documention_extras() {
+	
+	// Check value exists.
+	if( have_rows( 'extras' ) ): ?>
+		
+		<section class="doc-extras">
+			<div class="grid-container">
+			<?php // Loop through rows.
+			while ( have_rows( 'extras' ) ) : the_row();
+				
+				if ( get_row_layout() == 'download' ) : ?>
+					<div class="grid-100">
+						<table class="download-table">
+							<tr>
+								<td class="description">
+									<h3 style="margin: 0;">Related Download</h3>
+									<?php if ( !empty( get_sub_field( 'description' ) ) ) : ?>
+									<p>
+										<?php echo get_sub_field( 'description' ); ?>
+									</p>
+									<?php endif; ?>
+								</td>
+								<td class="file">
+									<a class="button" href="<?php echo get_sub_field( 'file' ); ?>">
+										<?php echo get_sub_field( 'label' ); ?>
+									</a>
+								</td>
+							</tr>
+						</table>
+					</div>
+				<?php endif;
+				
+				if ( get_row_layout() == 'screenshots' ) : ?>
+						<h3>Screenshots</h3>
+						
+						<div class="grid-container">
+						<?php $screenshots = get_sub_field( 'screenshots' );
+						foreach ( $screenshots as $screenshot ) { ?>
+							<div class="gallery grid-20 tablet-grid-20">
+							<a href="<?php echo $screenshot['url']; ?>">
+								<img src="<?php echo $screenshot['sizes']['large_avatar']; ?>" alt="" />
+							</a>
+							</div>
+						<?php } ?>
+						</div>
+							
+				<?php endif;
+				
+			// End loop.
+			endwhile; ?>
+			</div>
+		</section>
+		
+	<?php endif;
+	
+}
+add_action( 'hfm_documention_extras', 'hfm_documention_extras' );
+/*--------------------------------------------------------------
+# Options Page: Sitewide Banner
+--------------------------------------------------------------*/
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page( array(
+		'page_title' 	=> 'Sidewide Banner',
+		'menu_title'	=> 'Sitewide Banner',
+		'menu_slug' 	=> 'sitewide-banner-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	) );
+	
+}
+
+function display_sitewide_banner() {
+	
+	if ( !empty( get_field( 'banner_text', 'option' ) ) ) : ?>
+	<div class="sitewide-banner" style="color: <?php the_field( 'banner_text_color', 'option' ); ?>; background-color: <?php the_field( 'banner_background_color', 'option' ); ?>;">
+		
+		<div class="grid-container">
+			
+			<div class="grid-70 tablet-grid-70">
+				<?php the_field( 'banner_text', 'option' ); ?>
+			</div>
+			
+			<div class="grid-30 tablet-grid-30">
+				<a class="button" href="<?php the_field( 'banner_button_url', 'option' ); ?>">
+					<?php  the_field( 'banner_button_text', 'option' ); ?>
+				</a>
+			</div>
+			
+		</div>
+		
+	</div>
+	<?php endif;
+	
+}
