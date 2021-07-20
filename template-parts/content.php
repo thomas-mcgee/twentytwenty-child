@@ -22,8 +22,21 @@
 	if ( ! is_search() ) {
 		get_template_part( 'template-parts/featured-image' );
 	}
-
-	?>
+	
+	if ( !empty( get_field( 'office_photos' ) ) ) { ?>
+		
+		<div class="office-photos grid-container">
+		<?php $photos = get_field( 'office_photos' );
+		foreach ( $photos as $photo ) { ?>
+			<div class="gallery grid-20 tablet-grid-20">
+				<a href="<?php echo $photo['url']; ?>">
+					<img src="<?php echo $photo['sizes']['large_avatar']; ?>" alt="" />
+				</a>
+			</div>
+		<?php } ?>
+		</div>
+		
+	<?php } ?>
 
 	<div class="post-inner <?php echo is_page_template( 'templates/template-full-width.php' ) ? '' : 'thin'; ?> ">
 
