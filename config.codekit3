@@ -480,14 +480,6 @@
       "oAP" : "\/template-parts\/blocks\/testimonial\/testimonial.php",
       "oF" : 0
     },
-    "\/template-parts\/content-docs.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/template-parts\/content-docs.php",
-      "oF" : 0
-    },
     "\/template-parts\/content.php" : {
       "cB" : 0,
       "ft" : 8192,

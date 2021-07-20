@@ -22,24 +22,13 @@
 	if ( ! is_search() ) {
 		get_template_part( 'template-parts/featured-image' );
 	}
-	
-	if ( !empty( get_field( 'office_photos' ) ) ) { ?>
-		
-		<div class="office-photos grid-container">
-		<?php $photos = get_field( 'office_photos' );
-		foreach ( $photos as $photo ) { ?>
-			<div class="gallery grid-20 tablet-grid-20">
-				<a href="<?php echo $photo['url']; ?>">
-					<img src="<?php echo $photo['sizes']['large_avatar']; ?>" alt="" />
-				</a>
-			</div>
-		<?php } ?>
-		</div>
-		
-	<?php } ?>
+
+	?>
 
 	<div class="post-inner <?php echo is_page_template( 'templates/template-full-width.php' ) ? '' : 'thin'; ?> ">
-
+		
+		<?php hfm_documentation_notifications(); ?>
+		
 		<div class="entry-content">
 
 			<?php
@@ -47,19 +36,15 @@
 				the_excerpt();
 			} else {
 				the_content( __( 'Continue reading', 'twentytwenty' ) );
-			}
-			
-			if ( is_page_template( 'templates/template-team-members.php' ) ) {
-				
-				do_action( 'hfm_team_members_content' );
-				
-			} elseif ( get_post_type() == 'docs' ) {
-				
-				do_action( 'hfm_documention_extras' );
-				
 			} ?>
 
 		</div><!-- .entry-content -->
+			
+		<div class="doc-extras">
+			
+			<?php hfm_documention_extras(); ?>
+			
+		</div>
 
 	</div><!-- .post-inner -->
 
@@ -78,12 +63,6 @@
 
 		// Single bottom post meta.
 		twentytwenty_the_post_meta( get_the_ID(), 'single-bottom' );
-
-		if ( post_type_supports( get_post_type( get_the_ID() ), 'author' ) && is_single() ) {
-
-			get_template_part( 'template-parts/entry-author-bio' );
-
-		}
 		?>
 
 	</div><!-- .section-inner -->
